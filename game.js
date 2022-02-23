@@ -3,7 +3,7 @@ console.log("hello");
 
 
 var world = [
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -53,6 +53,37 @@ const newPiece = () => {
 
     drawWorld();
 }
+
+
+// function for line clear
+
+const checkLine = (cellValue) => {
+  return cellValue > 10;
+};
+const clearLine = () => {
+  for (var y = 0; y < world.length; y++) {
+    var arrayToTest = world[y].every(checkLine);
+    console.log(arrayToTest);
+    if (!arrayToTest) {
+      console.log("No score no points")
+
+    } else if (arrayToTest) {
+      world[y] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      console.log("That's 10 points to gryffindor");
+
+    }
+    console.log(world[y]);
+
+  }
+  console.log(world)
+
+}
+// end of line clear function 
+
+
+
+
+
 
 
 
@@ -218,6 +249,8 @@ function gameLoop() {
   setTimeout(gameLoop, 1000);
   drawWorld();
   moveDown();
+  // just runnign the function here for now, I will replace it somewhere else later so then it checks more frequently! 
+  clearLine();
 }
 
 gameLoop();
