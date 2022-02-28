@@ -13,21 +13,22 @@ body {
 }
 
 .gameContainer {
-  height: 470px;
-  width: 500px;
+  height: 800px;
+  width: 800px;
   border: solid 2px black;
   display: flex;
   flex-direction: row;
   justify-self: center;
 }
 .gameContainer__gameGrid {
-  height: 390px;
-  width: 220px;
+  height: 510px;
+  width: 260px;
   margin: 40px 10px 40px 40px;
   border: solid 2px black;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(18, 1fr);
+  grid-template-rows: repeat(22, 1fr);
+  align-items: auto;
 }
 .gameContainer__scoreGrid {
   height: 390px;
@@ -79,4 +80,46 @@ body {
   height: 20px;
   width: 20px;
   background-color: red;
+}
+
+.lineShape {
+  height: 20px;
+  width: 20px;
+  background-color: orange;
+}
+
+.elShape {
+  height: 20px;
+  width: 20px;
+  background-color: green;
+}
+
+.arShape {
+  height: 20px;
+  width: 20px;
+  background-color: blue;
+}
+
+.tShape {
+  height: 20px;
+  width: 20px;
+  background-color: pink;
+}
+
+.sShape {
+  height: 20px;
+  width: 20px;
+  background-color: yellow;
+}
+
+.zShape {
+  height: 20px;
+  width: 20px;
+  background-color: purple;
+}
+
+.staging {
+  height: 20px;
+  width: 20px;
+  background-color: magenta;
 }

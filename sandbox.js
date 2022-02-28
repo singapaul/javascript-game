@@ -16,19 +16,15 @@ console.log("hi paul");
 // when you use getElementbyclassName you get an array any time you get more than one result back you are trying to apply an event listener to multiple things
 // 
 
-// const pageListener = document.querySelector("body");
-// console.log(pageListener);
+const pageListener = document.querySelector("body");
+console.log(pageListener);
 
-// const bodyArrows = (evnt) => {
-//   const inputKey = evnt.code;
-//   if ((inputKey = ArrowLeft)) {s
-//     console.log("you pressed " + inputKey)
-//   } else if (inputKey = ArrowRight) {
-//     console.log("you pressed " + inputKey)
-//   }
-// };
+const bodyArrows = (evnt) => {
+  const inputKey = evnt.code;
+console.log(inputKey);
+};
 
-// pageListener.addEventListener("keydown", bodyArrows);
+pageListener.addEventListener("keydown", bodyArrows);
 
 
 // var world = [
